@@ -1,0 +1,20 @@
+@mixin fonts($font-family, $font-type){
+	font-family: "#{$font-type}";
+	src: url("../fonts/#{$font-family}/#{$font-type}/#{$font-type}.eot");
+	src: url("../fonts/#{$font-family}/#{$font-type}/#{$font-type}.eot#iefix") format("embedded-opentype"),
+	url("../fonts/#{$font-family}/#{$font-type}/#{$font-type}.woff") format("woff"),
+	url("../fonts/#{$font-family}/#{$font-type}/#{$font-type}.ttf") format("truetype"),
+	url("../fonts/#{$font-family}/#{$font-type}/#{$font-type}.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face{
+@include fonts(lato, lato-black);
+}
+@font-face{
+@include fonts(lato, lato-light);
+}
+@font-face{
+@include fonts(opensans, opensans-regular);
+}
